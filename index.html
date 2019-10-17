@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
     integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link rel="stylesheet" href="./style/style.css">
-  <script src=""></script>
+  <script src="./javascript/index.js" defer></script>
 </head>
 
 <body>
@@ -50,27 +50,28 @@
             <label for="exampleInputEmail1">Email</label>
             <i class="fas fa-plus-circle d-inline-block mx-2 cursorCopy" id="addEmailInput"></i>
             <div id="emailInputElement">
-              <div class="d-flex align-items-center w-75 " id="emailInputElementChild1">
-                <input type="email" class="form-control d-block  " id="inputEmail1" aria-describedby="emailHelp"
-                  placeholder="Enter email">
-                <i class="fas fa-minus-circle d-inline-block mx-2 cursorAlias"></i>
+              <div class="d-flex align-items-center w-75 ">
+                <input type='email' class='form-control d-block  ' id='inputEmail1'placeholder="Enter email">
+                <i class='sub fas fa-minus-circle d-inline-block mx-2 cursorAlias' id='subEmailInput1'></i>
 
               </div>
             </div>
+            <small id='commentEmailId' style="display: none;">Bạn chỉ có thể nhập tối đa 5 email, tối thiểu 1 email</small>
           </div>
 
           <div class="form-group">
             <label for="exampleInputPassword1">Phone Number</label>
             <i class="fas fa-plus-circle d-inline-block mx-2 cursorCopy" id="addPhoneNumber"></i>
             <div id="phoneInputElement">
-              <div class="d-flex align-items-center w-75" id="phoneInputElementChild1">
+              <div class="d-flex align-items-center w-75">
                 <span>+</span>
-                <input type="password" class="form-control w-50px mx-1" id="inputNationalPhoneNumber1" placeholder="84">
+                <input type='text' class='form-control w-50px mx-1' id='inputNationalPhoneNumber1' placeholder='84'>
                 <span>-</span>
-                <input type="password" class="form-control mx-1" id="inputPhoneNumber1" placeholder="123456789">
-                <i class="fas fa-minus-circle d-inline-block mx-2 cursorAlias"></i>
+                <input type='text' class='form-control mx-1' id='inputPhoneNumber1' placeholder='123456789'>
+                <i class='sub fas fa-minus-circle d-inline-block mx-2 cursorAlias' id='subPhoneNumberInput1'></i>
               </div>
             </div>
+            <small id='commentPhoneId' style='display: none;'>Bạn chỉ có thể nhập tối đa 5 sdt và tối thiểu 1 sdt</small>
 
 
           </div>
@@ -80,9 +81,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 </body>
 
 </html>
