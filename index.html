@@ -1,76 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/style.css">
-    <script src=""></script>
-  </head>
-  <body> 
-    <div class="container-fluid bg-dark top-fixed">
-      <div class="container">
-          <ul class="nav justify-content-left">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-      </div>
-        
-    </div>
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/style.css">
+  <script src=""></script>
+</head>
+
+<body>
+  <div class="container-fluid bg-dark top-fixed">
     <div class="container">
-      <div class="row bg-light">
-        <div class="col-md-6">
-          <img src="./picture/sontung.png" alt="" class="w-100 m-auto p-5">
-        </div>
-        <div class="col-md-6 my-5">
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <i class="fas fa-plus-circle d-inline-block mx-2 cursorCopy"></i>
-                  <div class="d-flex align-items-center w-75">
-                      <input type="email" class="form-control d-block  " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                      <i class="fas fa-minus-circle d-inline-block mx-2 cursorAlias"></i>
-                      
-                  </div>
-                  
-                 
-                </div>
+      <ul class="nav justify-content-left">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
 
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Phone Number</label>
-                  <i class="fas fa-plus-circle d-inline-block mx-2 cursorCopy"></i>
-                  <div class="d-flex align-items-center w-75">
-                      <span>+</span>
-                      <input type="password" class="form-control w-50px mx-1" id="exampleInputPassword1" placeholder="84" >  
-                      <span>-</span>  
-                      <input type="password" class="form-control mx-1" id="exampleInputPassword1" placeholder="123456789" >
-                      <i class="fas fa-minus-circle d-inline-block mx-2 cursorAlias"></i>
-                  </div>
-                 
-                </div>
-               
-                <button type="button" class="btn btn-primary">Submit</button>
-              </form>
-        </div>
+  </div>
+  <div class="container">
+    <div class="row bg-light">
+      <div class="col-md-6">
+        <img src="./picture/sontung.png" alt="" class="w-100 m-auto p-5">
+      </div>
+      <div class="col-md-6 my-5">
+        <h1> Join with us</h1>
+        <h6> You can eat everything in the world</h6>
+        <br>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <i class="fas fa-plus-circle d-inline-block mx-2 cursorCopy" id="addEmailInput"></i>
+            <div id="emailInputElement">
+              <div class="d-flex align-items-center w-75 " id="emailInputElementChild1">
+                <input type="email" class="form-control d-block  " id="inputEmail1" aria-describedby="emailHelp"
+                  placeholder="Enter email">
+                <i class="fas fa-minus-circle d-inline-block mx-2 cursorAlias"></i>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Phone Number</label>
+            <i class="fas fa-plus-circle d-inline-block mx-2 cursorCopy" id="addPhoneNumber"></i>
+            <div id="phoneInputElement">
+              <div class="d-flex align-items-center w-75" id="phoneInputElementChild1">
+                <span>+</span>
+                <input type="password" class="form-control w-50px mx-1" id="inputNationalPhoneNumber1" placeholder="84">
+                <span>-</span>
+                <input type="password" class="form-control mx-1" id="inputPhoneNumber1" placeholder="123456789">
+                <i class="fas fa-minus-circle d-inline-block mx-2 cursorAlias"></i>
+              </div>
+            </div>
+
+
+          </div>
+
+          <button type="button" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  </body>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</body>
+
 </html>
