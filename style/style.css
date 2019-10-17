@@ -4,3 +4,9 @@
 .w-100px{
     width: 100px;
 }
+.cursorCopy {
+    cursor: copy;
+}
+.cursorAlias {
+    cursor: alias;
+}
