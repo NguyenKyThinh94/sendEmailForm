@@ -1,20 +1,24 @@
 let addemailinput = document.getElementById('addEmailInput');
 let addPhoneNumber = document.getElementById('addPhoneNumber');
+let submitBottom = document.getElementById('submitBottom');
 let subEmailInput= document.querySelectorAll('#emailInputElement i');
 let subphoneInputElement= document.querySelectorAll('#phoneInputElement i');
 let inputEmail=document.querySelectorAll('#emailInputElement input');
 let phoneInput=document.querySelectorAll('#phoneInputElement input');
+
 
 let emailInputElement = document.getElementById('emailInputElement');
 let phoneInputElement = document.getElementById('phoneInputElement');
 
 addemailinput.addEventListener('click', addEmailInpuiFuction);
 addPhoneNumber.addEventListener('click', addPhoneNumberFuction);
+// submitBottom.addEventListener('click',SubmitForm);
 
 setEventClickSub(subEmailInput,'#emailInputElement');
 setEventValidateInput(inputEmail,'#emailInputElement');
 setEventClickSub(subphoneInputElement,'#phoneInputElement');
 setEventValidateInput(phoneInput,'#phoneInputElement');
+
 
 function addEmailInpuiFuction() {
     
@@ -28,7 +32,7 @@ function addEmailInpuiFuction() {
         node.innerHTML = inputEmailHtmlCode(idNumber)
         emailInputElement.appendChild(node);
         setEventClickSub(subEmailInput,'#emailInputElement');
-        setEventValidateInput(inputEmail,'#emailInputElement');
+        inputEmail=setEventValidateInput(inputEmail,'#emailInputElement');
     } else {
        
         commentEmailId.setAttribute('style',"display: block; color: red");
@@ -47,7 +51,7 @@ function addPhoneNumberFuction() {
         node.innerHTML =inputPhoneHtmlCode(idNumber);
         phoneInputElement.appendChild(node);
         setEventClickSub(subphoneInputElement,'#phoneInputElement');
-        setEventValidateInput(phoneInput,'#phoneInputElement');
+        phoneInput=setEventValidateInput(phoneInput,'#phoneInputElement');
     } else {
         
         commentPhoneId.setAttribute('style',"display: block; color: red");
@@ -89,6 +93,7 @@ function setEventValidateInput(id,query){
             value.addEventListener('keypress',valedatePhoneInput);
         }
     }
+    return id;
 }
 function subAElemnt(event){
     console.log(event.path);
@@ -136,13 +141,47 @@ function valedateEmailInput(){
     let regex =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm;
     console.log(email);
     
-    if (!regex.test(email)) {
+    if (!regex.test(email)||email=='') {
         console.log('sai');
         theEvent.path[0].setAttribute('style','border: 1px solid red');
+        theEvent.path[0].setAttribute('data-valid','false');
         
     }
     else {
         console.log('dung');
         theEvent.path[0].setAttribute('style','border: 1px solid');
+        theEvent.path[0].setAttribute('data-valid','true');
     }
+}
+function SubmitForm(){
+    let submitBl=true;
+    for (i=0; i< inputEmail.length;i++){
+        if (inputEmail[i].getAttribute('data-valid')=='false'||inputEmail[i].value=='' ){
+            submitBl=false;
+            inputEmail[i].setAttribute('style','border: 1px solid red');
+            alert('! Dong chua dien dung dinh dang');
+            return submitBl;
+        } else {
+            inputEmail[i].name='email'+i.toString();
+        }
+    }
+    
+    for (j=0; j< phoneInput.length;j++){
+        if (phoneInput[j].value.length==0){
+            phoneInput[j].setAttribute('style','border: 1px solid red');
+            submitBl=false;
+            alert('! Dong chua dien dung dinh dang');
+            return submitBl;
+
+        } else {
+            phoneInput[j].setAttribute('style','border: 1px solid');
+            if(j%2==0){
+                phoneInput[j].name='Nataional'+j.toString();
+            } else {
+                phoneInput[j].name='phone'+(j-1).toString();
+            }
+            
+        }
+    }
+    return submitBl;
 }

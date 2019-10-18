@@ -17,41 +17,23 @@
 </head>
 
 <body>
-  <div class="container-fluid bg-dark top-fixed">
-    <div class="container">
-      <ul class="nav justify-content-left">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-
-  </div>
+  
   <div class="container">
-    <div class="row bg-light">
-      <div class="col-md-6">
-        <img src="./picture/sontung.png" alt="" class="w-100 m-auto p-5">
+    <div class="row bg-light  h-600px">
+      <div class="col-md-6 position-relative">
+        <img src="./picture/sontungfull.png" alt="" class="w-100 m-auto p-5 pb-0 mb-0 position-absolute" style="bottom: 0;">
       </div>
       <div class="col-md-6 my-5">
         <h1> Join with us</h1>
         <h6> You can eat everything in the world</h6>
         <br>
-        <form>
+        <form id='formEmailPhone' onsubmit="return SubmitForm()" method="post">
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
             <i class="fas fa-plus-circle d-inline-block mx-2 cursorCopy" id="addEmailInput"></i>
             <div id="emailInputElement">
               <div class="d-flex align-items-center w-75  ">
-                <input type='email' class='form-control d-block m-2 ' id='inputEmail1'placeholder="Enter email">
+                <input type='text' class='form-control d-block m-2 ' id='inputEmail1'placeholder="Enter email">
                 <i class='sub fas fa-minus-circle d-inline-block mx-2 cursorAlias' id='subEmailInput1'></i>
 
               </div>
@@ -76,7 +58,7 @@
 
           </div>
 
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" id='submitBottom'>Submit</button>
         </form>
       </div>
     </div>
